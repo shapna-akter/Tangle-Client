@@ -8,7 +8,6 @@ import AddSchedule from "../../components/pages/Dashboard/Add/AddSchedule";
 import CaregiverList from "../../components/pages/Dashboard/UserList/CaregiverList";
 import Dashboard from "../../components/pages/Dashboard/Dashboard/Dashboard";
 import Payment from "../../components/pages/Dashboard/Payment/Payment";
-import EmployeesList from "../../components/pages/EmployeesList/EmployeesList";
 import Home from "../../components/pages/Home/Home/Home";
 import Email from "../../components/pages/Login/Email";
 import Login from "../../components/pages/Login/Login";
@@ -47,10 +46,7 @@ export const router = createBrowserRouter([
           // </PrivateRoute>
         ),
       },
-      {
-        path: "/employeesList",
-        element: <EmployeesList></EmployeesList>,
-      },
+     
     ],
   },
   {
