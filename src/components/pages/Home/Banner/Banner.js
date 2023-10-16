@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../../Contexts/AuthProvider";
 import bgImg from "../../../../assets/BannerBg.webp";
 const Banner = () => {
-  const { isValidUser } = useContext(AuthContext);
-  const { email } = isValidUser;
+  // const { isValidUser } = useContext(AuthContext);
+  // const { email } = isValidUser;
   return (
     <div
       className="lg:min-h-screen h-52 md:h-96 bg-no-repeat bg-cover bg-center flex items-center w-full"
@@ -31,7 +31,7 @@ const Banner = () => {
         >
           Need Help?
         </Link>
-        {email ? (
+        {/* {email ? (
           <Link
             to="/dashboard"
             className="btn btn-primary btn-xs lg:btn-md text-white mt-10 ml-2 lg:ml-5 capitalize"
@@ -45,7 +45,13 @@ const Banner = () => {
           >
             Login
           </Link>
-        )}
+        )} */}
+        <Link
+          to="/dashboard"
+          className="btn btn-primary btn-xs lg:btn-md text-white mt-10 lg:ml-5 capitalize"
+        >
+          Dashboard
+        </Link>
       </div>
     </div>
   );

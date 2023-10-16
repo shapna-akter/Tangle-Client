@@ -6,7 +6,6 @@ import AddCaregiver from "../../components/pages/Dashboard/Add/AddCaregiver";
 import AddClient from "../../components/pages/Dashboard/Add/AddClient";
 import AddSchedule from "../../components/pages/Dashboard/Add/AddSchedule";
 import CaregiverList from "../../components/pages/Dashboard/UserList/CaregiverList";
-import CreateEvents from "../../components/pages/Dashboard/CreateEvents/CreateEvents";
 import Dashboard from "../../components/pages/Dashboard/Dashboard/Dashboard";
 import Payment from "../../components/pages/Dashboard/Payment/Payment";
 import EmployeesList from "../../components/pages/EmployeesList/EmployeesList";
@@ -16,8 +15,6 @@ import Login from "../../components/pages/Login/Login";
 import ResetPassword from "../../components/pages/Login/ResetPassword";
 import ErrorPage from "../../components/shared/ErrorPage/ErrorPage";
 import DashboardLayout from "../../layout/DashboardLayout";
-import AdminRoute from "../privateRoute/AdminRoute";
-import PrivateRoute from "../privateRoute/PrivateRoute";
 import ClientsList from "../../components/pages/Dashboard/UserList/ClientsList";
 import AddAdminAndOfficeStuff from "../../components/pages/Dashboard/Add/AddAdminAndOfficeStuff";
 import AddOrganization from "../../components/pages/Dashboard/Add/AddOrganization";
@@ -37,17 +34,17 @@ export const router = createBrowserRouter([
       {
         path: "/clients/:id",
         element: (
-          <PrivateRoute>
+          // <PrivateRoute>
             <Clients></Clients>
-          </PrivateRoute>
+          // </PrivateRoute>
         ),
       },
       {
         path: "/caregivers/:id",
         element: (
-          <PrivateRoute>
+          // <PrivateRoute>
             <CareGivers></CareGivers>
-          </PrivateRoute>
+          // </PrivateRoute>
         ),
       },
       {
@@ -59,9 +56,9 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: (
-      <PrivateRoute>
+      // <PrivateRoute>
         <DashboardLayout></DashboardLayout>
-      </PrivateRoute>
+      // </PrivateRoute>
     ),
     errorElement: <ErrorPage></ErrorPage>,
     children: [
@@ -74,55 +71,51 @@ export const router = createBrowserRouter([
         element: <AddSchedule></AddSchedule>,
       },
       {
-        path: "/dashboard/createEvents",
-        element: <CreateEvents></CreateEvents>,
-      },
-      {
         path: "/dashboard/clientList",
         element: (
-          <AdminRoute>
+          // <AdminRoute>
             <ClientsList></ClientsList>
-          </AdminRoute>
+          // </AdminRoute>
         ),
       },
       {
         path: "/dashboard/caregiverList",
         element: (
-          <AdminRoute>
+          // <AdminRoute>
             <CaregiverList></CaregiverList>
-          </AdminRoute>
+          // </AdminRoute>
         ),
       },
       {
         path: "/dashboard/addClient",
         element: (
-          <AdminRoute>
+          // <AdminRoute>
             <AddClient />
-          </AdminRoute>
+          // </AdminRoute>
         ),
       },
       {
         path: "/dashboard/addCaregiver",
         element: (
-          <AdminRoute>
+          // <AdminRoute>
             <AddCaregiver />
-          </AdminRoute>
+          // </AdminRoute>
         ),
       },
       {
         path: "/dashboard/addAdminAndOfficeStuff",
         element: (
-          <AdminRoute>
+          // <AdminRoute>
             <AddAdminAndOfficeStuff />
-          </AdminRoute>
+          // </AdminRoute>
         ),
       },
       {
         path: "/dashboard/addOrganization",
         element: (
-          <AdminRoute>
+          // <AdminRoute>
             <AddOrganization />
-          </AdminRoute>
+          // </AdminRoute>
         ),
       },
       {

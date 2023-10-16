@@ -27,7 +27,45 @@ const DashboardLayout = () => {
                 Dashboard
               </Link>
             </li>
-            {(isValidUser?.role === "admin" ||
+            <li>
+              <Link to="/dashboard/addClient" className="hover:bg-info">
+                Add Client
+              </Link>
+            </li>
+            <li>
+              <Link to="/dashboard/addCaregiver" className="hover:bg-info">
+                Add Employee
+              </Link>
+            </li>
+            <li>
+              <Link to="/dashboard/addOrganization" className="hover:bg-info">
+                Add Organization
+              </Link>
+            </li>
+            <li>
+              <Link to="/dashboard/addAdminAndOfficeStuff" className="hover:bg-info">
+                Add Admin And Office Stuff
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/dashboard/clientList" className="hover:bg-info">
+                Client List
+              </Link>
+            </li>
+            <li>
+              <Link to="/dashboard/caregiverList" className="hover:bg-info">
+                Caregiver List
+              </Link>
+            </li>
+
+            <li>
+              <Link className="hover:bg-info">Accounting</Link>
+            </li>
+            <li>
+              <Link className="hover:bg-info">Reporting</Link>
+            </li>
+            {/* {(isValidUser?.role === "admin" ||
               isValidUser?.role === "superAdmin") && (
                 <>
                   <li>
@@ -61,16 +99,7 @@ const DashboardLayout = () => {
                       Caregiver List
                     </Link>
                   </li>
-                  {/* <li>
-                  <Link to="/dashboard/addSchedule" className="hover:bg-info">
-                    Add Schedule
-                  </Link>
-                </li> */}
-                  {/* <li>
-                  <Link to="/dashboard/createEvents" className="hover:bg-info">
-                    Create Events
-                  </Link>
-                </li> */}
+                 
                   <li>
                     <Link className="hover:bg-info">Accounting</Link>
                   </li>
@@ -78,7 +107,7 @@ const DashboardLayout = () => {
                     <Link className="hover:bg-info">Reporting</Link>
                   </li>
                 </>
-              )}
+              )} */}
           </ul>
         </div>
       </div>
